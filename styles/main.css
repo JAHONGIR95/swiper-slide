@@ -23,8 +23,15 @@ body {
 }
 
 .swiper-container {
-  width: 100%;
+  width: 1088px;
   height: 612px;
+  text-align: center;
+}
+
+.swiper-container .swiper-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .swiper-pagination-bullet {
@@ -38,5 +45,51 @@ body {
   border-radius: 6px;
   width: 116px;
   opacity: 1;
+}
+
+.person-slide {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  width: 192px;
+  height: 256px;
+}
+
+.person-slide.swiper-slide-active {
+  width: 416px !important;
+  height: 260px !important;
+}
+
+.person-slide.swiper-slide-prev, .person-slide.swiper-slide-next {
+  width: 304px !important;
+  height: 200px !important;
+}
+
+.person-slide .person-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.person-slide .person-info {
+  position: absolute;
+  bottom: 0;
+}
+
+.person-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#383C45), to(rgba(56, 60, 69, 0)));
+  background: linear-gradient(0deg, #383C45 0%, rgba(56, 60, 69, 0) 100%);
 }
 /*# sourceMappingURL=main.css.map */
