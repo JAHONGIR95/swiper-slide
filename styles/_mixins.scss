@@ -1,0 +1,16 @@
+@mixin before($url, $top, $right, $bottom, $left, $bgColor: transperent, $bgSize, $bgPos){
+    content: "";
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    margin: auto;
+    background-color: $bgColor;
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: $bgSize;
+    background-position: $bgPos;
+    width: $width;
+    height: $height;
+}
